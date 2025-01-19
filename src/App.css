@@ -1,72 +1,83 @@
-.App {
-  text-align: center;
-  font-family: Arial, sans-serif;
-}
+/* General Reset */
 
-.App-header {
-  padding: 20px;
-}
-
-.form-container {
-  margin: 20px auto;
-  max-width: 400px;
-  text-align: left;
-}
-
-.input-prompt {
-  width: 100%;
-  height: 80px;
-  margin-bottom: 10px;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.mood-label {
-  display: block;
-  margin-bottom: 10px;
-}
-
-.mood-select {
-  width: 100%;
-  padding: 8px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.submit-button {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  color: white;
-  background-color: #007bff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.submit-button:disabled {
-  background-color: #cccccc;
-}
-
-.video-container {
-  margin-top: 20px;
-}
-
-.generated-video {
-  max-width: 100%;
-  margin-bottom: 10px;
-}
-
-.download-button {
-  display: inline-block;
-  padding: 10px;
-  font-size: 16px;
-  color: white;
-  background-color: #28a745;
-  text-decoration: none;
-  border-radius: 5px;
-}
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: 
+      url('images/Background 1.png') lightgray 50% / cover no-repeat; /* Use cover to handle various screen sizes */
+  }
+  
+  /* App Container */
+  .App {
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Give it some horizontal padding on small screens */
+    padding: 0 20px;
+    box-sizing: border-box; /* Ensures padding doesn’t break layout */
+  }
+  
+  /* Global Sections */
+  section {
+    padding: 20px;
+    width: 100%;
+    max-width: 800px; /* Constrain the content width on larger screens */
+    margin: 0 auto;   /* Center the section on wider screens */
+    box-sizing: border-box; 
+  }
+  
+  /* Button Styling (Common Across App) */
+  button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    outline: none;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* ===================== */
+  /*     MEDIA QUERIES     */
+  /* ===================== */
+  
+  /* 1) Tablet and below (max-width: 768px) */
+  @media (max-width: 768px) {
+    section {
+      padding: 15px;
+      max-width: 600px; /* Slightly smaller max width for tablets */
+    }
+    
+    button {
+      padding: 10px 15px;
+      font-size: 0.95rem;
+    }
+  }
+  
+  /* 2) Mobile and below (max-width: 480px) */
+  @media (max-width: 480px) {
+    .App {
+      padding: 0 10px; 
+    }
+  
+    section {
+      padding: 10px;
+      max-width: 100%;
+    }
+  
+    button {
+      width: 100%;        /* Make the button span full width on very small screens */
+      font-size: 1rem; 
+      padding: 12px;      /* Slightly larger tap area for mobile */
+    }
+  }
+  

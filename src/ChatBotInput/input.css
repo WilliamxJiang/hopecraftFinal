@@ -1,0 +1,132 @@
+/* Input Page Container */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%; /* Changed from max-width: 800px to 90% for flexibility */
+    max-width: 600px; /* Reduced max-width for smaller layouts */
+    margin: 20px auto; /* Reduced top and bottom margins */
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    font-family: 'VT323', monospace;
+    margin-bottom: 10px; /* Space below the input */
+  }
+  .input-container h1 {
+    color: #000; /* Text color */
+    text-align: center;
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    font-family: 'VT323', monospace;
+
+
+    /* Add White Border Using text-shadow */
+    text-shadow:
+        /* Top */
+        0px -3px 0 #FFF,
+        /* Bottom */
+        0px 3px 0 #FFF,
+        /* Left */
+        -3px 0px 0 #FFF,
+        /* Right */
+        3px 0px 0 #FFF,
+        /* Top-Left */
+        -3px -3px 0 #FFF,
+        /* Top-Right */
+        3px -3px 0 #FFF,
+        /* Bottom-Left */
+        -3px 3px 0 #FFF,
+        /* Bottom-Right */
+        3px 3px 0 #FFF;
+}
+  .banner-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    margin-bottom: 50px; /* Space below the banner */
+  }
+  
+  
+  /* Input Prompt Styling */
+  .user-input {
+    display: flex;
+    padding: 1.5rem;
+    align-items: center;
+    gap: 0.625rem;
+    align-self: stretch;
+    /* By default, stretch to the container’s width */
+    width: 100%;
+    height: auto;
+    color: #000;
+    font-size: 2.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    box-sizing: border-box;
+    font-family: 'VT323', monospace;
+    margin-bottom: 10px; /* Space below the input */
+
+  }
+  
+  /* Submit Button */
+  .submit-button {
+    font-family: 'VT323', monospace;
+    color: #FFF;
+    text-align: center;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding: 12px 30px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    outline: none;
+    margin-top: 20px; /* Give some space above */
+    border-radius: 0.625rem;
+background: #550080;
+box-shadow: 4px 4px 4px 0px rgba(255, 255, 255, 0.10) inset, 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  }
+  
+  .submit-button:hover {
+    background-color: #bf7ee0;
+  }
+  
+  @media (max-width: 768px) {
+    .input-container {
+      padding: 15px;
+    }
+  
+    .user-input {
+      font-size: 1.8rem;
+      padding: 1rem;
+    }
+  
+    .submit-button {
+      font-size: 1.2rem;
+      padding: 10px 20px;
+    }
+  }
+  
+  /* For mobile devices (<= 480px) */
+  @media (max-width: 480px) {
+    .input-container {
+      padding: 10px;
+    }
+  
+    .user-input {
+      font-size: 1.4rem;
+      padding: 0.75rem;
+    }
+  
+    .submit-button {
+      font-size: 1rem;
+      padding: 12px;
+      width: 100%;         /* Make the button full width for easier tapping */
+      box-sizing: border-box;
+    }
+  }

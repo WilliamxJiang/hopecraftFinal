@@ -1,0 +1,122 @@
+/* Output.css */
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+@keyframes zoomToFullScreen {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.5); /* Adjust the scale as needed */
+    }
+  }
+/* Container for the video or end screen */
+.video-container {
+  position: relative;
+  width: 60%;
+  max-width: 700px;
+  margin: 60px auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: scale(1);
+  transition: all 3s ease; /* Adjust as needed for smooth transitions */
+}
+.video-container.fullscreen {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(1);
+    z-index: 9999;
+    animation: zoomToFullScreen 3s forwards; /* Ensure this matches the transition duration */
+  }
+
+/* Video styling */
+.video-player {
+  width: 100%;
+  border: 2px solid #444;
+  background-color: black;
+}
+
+.button-section {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+
+  .circular-button {
+    width: 80px; /* Equal width and height for a circle */
+    height: 80px;
+    font-size: 1.2rem; /* Adjust text size */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'VT323', monospace;
+    border-radius: 3rem;
+    background: rgba(164, 198, 234, 0.25);
+    box-shadow: 0px 4px 4px 0px rgba(32, 32, 131, 0.10);
+    backdrop-filter: blur(5px);
+    /* Optional Enhancements */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+  
+  .circular-button:hover {
+    background-color: rgba(255, 255, 255, 1); /* Fully opaque on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+  }
+  
+  .circular-button:active {
+    transform: scale(0.95); /* Slightly shrink on click */
+  }
+  
+  .circular-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Blue glow for accessibility */
+  }
+  .button-icon {
+    color: #ffff; /* Ensure the icon has a base color */
+    text-shadow: 0 0 2px #cd97fa; /* White outline */
+  }
+  .button-text {
+    color: #ffff; /* Base text color */
+    text-shadow: 0 0 2px #cd97fa; /* White outline for text */
+    font-size: 1rem; /* Adjust as needed */
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .circular-button {
+      width: 60px;
+      height: 60px;
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .circular-button {
+      width: 40px;
+      height: 40px;
+      font-size: 0.9rem;
+    }
+  }
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .video-container {
+    width: 80%;
+    margin: 40px auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-container {
+    width: 90%;
+    margin: 20px auto;
+  }
+}
