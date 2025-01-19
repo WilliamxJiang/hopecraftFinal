@@ -1,0 +1,72 @@
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.App-header {
+  padding: 20px;
+}
+
+.form-container {
+  margin: 20px auto;
+  max-width: 400px;
+  text-align: left;
+}
+
+.input-prompt {
+  width: 100%;
+  height: 80px;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.mood-label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.mood-select {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-button:disabled {
+  background-color: #cccccc;
+}
+
+.video-container {
+  margin-top: 20px;
+}
+
+.generated-video {
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+.download-button {
+  display: inline-block;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  background-color: #28a745;
+  text-decoration: none;
+  border-radius: 5px;
+}
